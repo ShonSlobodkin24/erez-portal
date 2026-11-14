@@ -1,8 +1,8 @@
 "use client";
+import { Home, Info, Menu, Search, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Home, Info, Search, Menu, X, Shield } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b bg-white/95 shadow-sm backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
-        <Link href="/" className="text-olive" aria-label="ראשי"><Shield className="h-8 w-8" /></Link>
+        <Link href="/" aria-label="ראשי"><img src="/logo.png" alt="לוגו גדוד ארז" className="h-10 w-10 object-contain" /></Link>
         <h1 className="text-lg font-bold text-rose-dark md:text-xl">שימור ידע - גדוד ארז</h1>
         <nav className="hidden items-center gap-2 md:flex">
           <Link href="/" className={link}><Home size={18} />ראשי</Link>
